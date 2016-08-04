@@ -1,6 +1,6 @@
 {
   "name": "vue-starter",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "Simple Vue Js Starter for single page application with Vuex and Vue Router",
   "main": "./src/js/components/vue-starter.vue",
   "scripts": {
