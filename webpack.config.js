@@ -21,8 +21,8 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.styl$/,
-        loaders: ['style','css', 'stylus']
+        test: /\.sass$/,
+        loaders: ['style','css', 'sass']
       },
       {
         test: /\.css$/,
