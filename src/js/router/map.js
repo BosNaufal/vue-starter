@@ -1,9 +1,15 @@
 export default {
+
   '/': {
-    component: require('../components/home/index.vue'),
+    component: function (resolve) {
+      require(['../components/Home/index.vue'], resolve)
+    }
   },
 
-  '*': {
-    component: require('../components/not-found.vue'),
+  '/about': {
+    component: function(resolve){
+      require(['../components/About/index.vue'], resolve)
+    },
   },
+
 }

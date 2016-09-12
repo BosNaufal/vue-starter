@@ -6,7 +6,7 @@ Vue.config.debug = true;
 Vue.config.devTools = true;
 
 // import components
-import app from './components/app.vue';
+import app from './components/App.vue';
 
 // import map
 import map from './router/map.js';
