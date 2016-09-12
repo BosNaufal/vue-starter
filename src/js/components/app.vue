@@ -7,11 +7,7 @@
 
 <script>
 
-
-  require('../../vendor/bootstrap/css/bootstrap.min.css')
-  require('../../vendor/ionicons/css/ionicons.min.css')
-
-  require('../../sass/main.sass')
+  import '../../sass/main.sass'
 
   import Store from '../vuex/index.js';
 

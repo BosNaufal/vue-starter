@@ -34,27 +34,27 @@ module.exports = {
 
       {
         test: /\.(sass|scss)$/,
-        loader: combineLoaders([
-          {
-            loader: 'style',
-          },
-          {
-            loader: 'css',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]__[hash:base64:5]'
+        loader: ExtractTextPlugin.extract(
+          'style',
+          combineLoaders([
+            {
+              loader: 'css',
+              query: {
+                modules: true,
+                localIdentName: '[name]__[local]__[hash:base64:5]'
+              }
+            },
+            {
+              loader: 'sass'
+            },
+            {
+              loader: 'autoprefixer',
+              query: {
+                browsers: 'last 2 versions'
+              }
             }
-          },
-          {
-            loader: 'sass'
-          },
-          {
-            loader: 'autoprefixer',
-            query: {
-              browsers: 'last 2 versions'
-            }
-          }
-        ])
+          ])
+        )
       },
 
       {
@@ -85,5 +85,14 @@ module.exports = {
       },
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin('build.css'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': '"production"'
+      }
+    }),
+  ]
 
 };
