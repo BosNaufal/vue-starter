@@ -1,5 +1,8 @@
 
-
-export function add({ dispatch }, arg) {
-  // Do Something Here
-};
+export default function({ dispatch }, action, arg) {
+   switch (action) {
+    case 'ADD':
+      // Do Something Here
+      return ;
+   }
+}
