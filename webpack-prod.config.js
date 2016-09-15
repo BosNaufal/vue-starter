@@ -39,10 +39,6 @@ module.exports = {
           combineLoaders([
             {
               loader: 'css',
-              query: {
-                modules: true,
-                localIdentName: '[name]__[local]__[hash:base64:5]'
-              }
             },
             {
               loader: 'sass'
@@ -71,14 +67,7 @@ module.exports = {
         test: /\.css$/,
         loaders: ['style','css']
       },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-      },
+      
       {
         test: /\.json$/,
         loader: 'json'

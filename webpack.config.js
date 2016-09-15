@@ -30,6 +30,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
+        query: {
+          presets: ["es2015"],
+          plugins: ["transform-object-rest-spread"]
+        }
       },
 
       {
@@ -40,10 +44,6 @@ module.exports = {
           },
           {
             loader: 'css',
-            query: {
-              modules: true,
-              localIdentName: '[name]__[local]__[hash:base64:5]'
-            }
           },
           {
             loader: 'sass'
@@ -55,16 +55,6 @@ module.exports = {
             }
           }
         ])
-      },
-
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
-      },
-
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
       },
 
       {
